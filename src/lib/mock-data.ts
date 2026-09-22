@@ -15,7 +15,7 @@ export const students: Student[] = [
     courses: ["261207", "261497"],
   },
   {
-    studentId: "650610003", // ⚠️ ต้นฉบับพิมพ์ผิดเป็น "650615003" — ต้องตรงกับ enrollments ด้านล่าง
+    studentId: "650610003",
     firstName: "Emily",
     lastName: "Blunt",
     program: "ISNE",
@@ -41,7 +41,6 @@ export const courses: Course[] = [
   },
 ];
 
-// enrolledAt: เวลาตัวอย่างที่ลงทะเบียนไว้แล้ว (ไว้แสดง "ลงทะเบียนเมื่อ" บนการ์ด)
 export const enrollments: Enrollment[] = [
   {
     studentId: "650610002",
@@ -65,15 +64,13 @@ export const enrollments: Enrollment[] = [
   },
 ];
 
-// นักศึกษาที่ "ล็อกอินอยู่" — ไม่มีระบบ Login/Role ในแลปนี้ จึงกำหนดไว้ที่นี่ที่เดียว
 export const CURRENT_STUDENT_ID = "650610002";
 export const currentStudent = students.find(
   (s) => s.studentId === CURRENT_STUDENT_ID,
 )!;
 
-// ข้อมูลส่วนแสดงสถานะผู้ใช้ที่ Sidebar (ข้อ 5 ของโจทย์) — แก้เป็นชื่อเล่นและรูปของตัวเอง
 export const currentUser = {
-  nickname: "Cillian",
+  nickname: "Nemo",
   role: "STUDENT" as "STUDENT" | "ADMIN",
-  avatar: "/profile.svg", // วางรูปไว้ที่ public/
+  avatar: "profile.png",
 };

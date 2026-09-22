@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-
 import { AppSidebar } from "@/components/app-sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
@@ -25,6 +24,9 @@ export default function RootLayout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
+        <footer className="border-t py-3 px-4 text-center text-xs text-muted-foreground">
+          Napatsadon Jampa (680610687)
+        </footer>
       </SidebarInset>
     </SidebarProvider>
   );
